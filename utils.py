@@ -1,6 +1,6 @@
 import sys
 from math import sin, cos, sqrt, pi
-import cv
+import cv2 as cv
 import urllib2
 import time
 import math
@@ -75,7 +75,7 @@ def euclid_distance(p1,p2):
 def get_points_from_img(src,treshold=50,simpleto=100,t=CANNY):
     ts = time.time()
     if isinstance(src,str):
-        src = cv.LoadImage(src, cv.CV_LOAD_IMAGE_GRAYSCALE)
+        src = cv.imread(src, iscolor=cv.CV_LOAD_IMAGE_GRAYSCALE)
     test = cv.CreateImage(cv.GetSize(src),8,1)  
     if t == CANNY:
         dst = cv.CreateImage(cv.GetSize(src), 8, 1)

@@ -6,7 +6,7 @@ import munkres
 from utils import get_points_from_img,get_elements,bookenstain
 import time
 import heapq
-import cv
+import cv2 as cv
 import sys
 
 seterr(all='ignore')
